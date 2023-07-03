@@ -2,7 +2,7 @@
 
 #include <catch2/catch_test_macros.hpp>
 
-TEST_CASE("nth Fibonacci number is computer", "[fib]") {
+TEST_CASE("nth Fibonacci number is computed", "[fib]") {
     REQUIRE(fib(-10) == -10);
     REQUIRE(fib(0) == 0);
     REQUIRE(fib(5) == 5);

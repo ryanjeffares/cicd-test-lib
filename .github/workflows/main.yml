@@ -1,0 +1,26 @@
+name: Build and Test on Okdo ROCK 4 C+
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Builds the library and tests
+        run: |
+          mkdir build -p
+          cmake -B build -S .
+          cmake --build build
+
+  test:
+    runs-on: self-hosted
+    needs: build
+
+    steps:
+      - name: Runs tests
+        run: |
+          ./build/tests

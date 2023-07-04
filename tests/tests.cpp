@@ -5,7 +5,7 @@
 TEST_CASE("nth Fibonacci number is computed", "[fib]") {
     REQUIRE(fib(-10) == -10);
     REQUIRE(fib(0) == 0);
-    REQUIRE(fib(1) == 0);
+    REQUIRE(fib(1) == 1);
     REQUIRE(fib(5) == 5);
     REQUIRE(fib(10) == 55);
     REQUIRE(fib(20) == 6765);

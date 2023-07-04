@@ -11,4 +11,3 @@ TEST_CASE("nth Fibonacci number is computed", "[fib]") {
     REQUIRE(fib(20) == 6765);
     REQUIRE(fib(30) == 832040);
 }
-

@@ -5,13 +5,6 @@ include(FetchContent)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-FetchContent_Declare(fmt
-    GIT_REPOSITORY https://github.com/fmtlib/fmt.git
-    GIT_TAG master
-    GIT_SHALLOW ON
-)
-FetchContent_MakeAvailable(fmt)
-
 FetchContent_Declare(Catch2
     GIT_REPOSITORY https://github.com/catchorg/Catch2.git
     GIT_TAG v3.3.2
@@ -29,5 +22,4 @@ endif()
 
 target_compile_options(cicd-test-lib PRIVATE -Wall -Wextra -Wpedantic -Werror)
 
-target_link_libraries(cicd-test-lib PRIVATE fmt::fmt)
 target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)

@@ -17,7 +17,7 @@ add_executable(tests tests/tests.cpp src/lib.cpp)
 
 set_property(TARGET cicd-test-lib PROPERTY CXX_STANDARD 23)
 if (CMAKE_BUILD_TYPE MATCHES Debug)
-    target_compile_definitions(cicd-test-lib PRIVATE CICD-TEST-LIB_DEBUG)
+    target_compile_definitions(cicd-test-lib PRIVATE CICD_TEST_LIB_DEBUG)
 endif()
 
 target_compile_options(cicd-test-lib PRIVATE -Wall -Wextra -Wpedantic -Werror)
